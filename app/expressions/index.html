@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>scopes</title>
+    <title>expressions</title>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
 </head>
 <body>
 
 
 <div ng-app="myApp">
+
     <div ng-controller="MyController">
-        <h2>Hello World</h2>
-        <h3>Hello {{ name }}</h3>
+        <input ng-model="expr" type="text" placeholder="Enter an expression"/>
+        <h2>{{ parsedExpr }}</h2>
     </div>
+
 </div>
-<script src="../scripts/scopes/app.js"></script>
+<script src="../scripts/expressions/app.js"></script>
 </body>
 </html>

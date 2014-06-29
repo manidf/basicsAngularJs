@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>controllers</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+</head>
+<body>
+
+
+<div ng-app="app">
+    <div ng-controller="FirstController">
+        <h3>The Simplest adding machine ever</h3>
+        <button ng-click="add(1)" class="button">Add</button>
+        <a ng-click="subtract(1)">Subtract</a>
+        <h4>Current count: {{ counter  }}</h4>
+    </div>
+
+    <hr/>
+
+    <div ng-controller="MyPersonController">
+        <h1>{{ person }}</h1>
+        and thier name:
+        <h2>{{ person.name }}</h2>
+    </div>
+
+    <hr/>
+
+    <div ng-controller="ParentController">
+        <div ng-controller="ChildController">
+            <a ng-click="sayHello()">Say Hello</a>
+        </div>
+        {{ person }}
+    </div>
+
+</div>
+<script src="../scripts/controllers/app.js"></script>
+</body>
+</html>
