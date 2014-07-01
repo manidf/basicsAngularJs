@@ -1,21 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>expressions-b $interpolate</title>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <title>expressions-b $interpolate</title>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
 </head>
 <body>
 
 
 <div ng-app="myApp">
+  <div id="emailEditor" ng-controller="MyController">
+    <input ng-model="to"
+           type="email"
+           placeholder="Recipient"/>
+    <textarea ng-model="emailBody"></textarea>
 
-    <div ng-controller="MyController">
-        <input ng-model="to" type="email" placeholder="Recipient" />
-        <textarea ng-model="emailBody" cols="30" rows="10"></textarea>
-        <pre>{{ previewText }}</pre>
+    <div id="emailPreview">
+      <pre>__ previewText __</pre>
     </div>
-
+  </div>
 </div>
 <script src="../scripts/expressions-b/app.js"></script>
 </body>
