@@ -1,16 +1,46 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta charset="UTF-8">
   <title>filters</title>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap-theme.css"/>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
 </head>
 <body>
-<div ng-model="filtersDemo1">
-  <div>
-    {{ }}
+
+<div class="container-fluid">
+<div ng-app="myApp">
+
+  <div ng-controller="TextDemo">
+    <h1>Capitalise Letter</h1>
+    <h2> {{ name | uppercase }} </h2>
   </div>
+
+  <hr/>
+
+  <div ng-controller="NumericDemo">
+    <h1>Numbers</h1>
+    <h2> {{ 234.12345678910 | number:4 }} </h2>
+  </div>
+
+  <hr/>
+
+  <div ng-controller="CurrencyDemo">
+    <h1>Currency filter</h1>
+    <h2> {{ 1237879978966785876 | currency }}</h2>
+  </div>
+
+  <hr/>
+  <div ng-controller="DateDemo">
+    <h1>Date</h1>
+    <h2> {{ today | date }} </h2>
+  </div>
+
 </div>
+</div>
+
 <script src="../scripts/filters/app.js"></script>
 </body>
 </html>

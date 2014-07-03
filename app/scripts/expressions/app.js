@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module;
-angular.module("myApp", [])
+angular.module('myApp', [])
     .controller('MyController', function($scope, $parse){
        $scope.$watch('expr', function(newVal, oldVal, scope){
           if (newVal !== oldVal) {
