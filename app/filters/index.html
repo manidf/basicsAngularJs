@@ -13,6 +13,14 @@
 <div class="container-fluid">
 <div ng-app="myApp">
 
+  <div >
+    <form name="form" novalidate>
+      <label name="email" for="email">Your name</label>
+      <input type="email" name="email" ng-model="user.email" placeholder="Email Address" required />
+    </form>
+  </div>
+  <hr/>
+
   <div ng-controller="TextDemo">
     <h1>Capitalise Letter</h1>
     <h2> {{ name | uppercase }} </h2>
@@ -35,8 +43,41 @@
   <hr/>
   <div ng-controller="DateDemo">
     <h1>Date</h1>
-    <h2> {{ today | date }} </h2>
+    <h2> {{ today | date: 'medium' }} </h2>
   </div>
+
+  <div>
+    <h1>Form Validation</h1>
+  </div>
+  <div ng-required="RequiredDemo">
+    <h2>Required</h2>
+    <input type="text" required />
+  </div>
+  <div ng-required="MinimumLengthDemo">
+    <h2>Minimum Length</h2>
+    <input type="text" ng-minlength=5 />
+  </div>
+  <div ng-required="MaximumLengthDemo">
+    <h2>Maximum Lenth</h2>
+    <input type="text" ng-maxlength=20/>
+  </div>
+  <div ng-required="MatchesPatternDemo">
+    <h2>Matches Pattern</h2>
+    <input type="text" ng-pattern="/a-zA-Z" />
+  </div>
+  <div ng-required="EmailDemo">
+    <h2>Email Demo</h2>
+    <input type="email" name="email" ng-pattern="user.email" />
+  </div>
+  <div ng-required="URLDemo">
+    <h2>URL</h2>
+    <input type="url" name="homepage" ng-pattern="user.facebook_url" />
+  </div>
+  <div ng-required="NumberDemo">
+    <h2>Number</h2>
+    <input type="number" name="age" ng-pattern="user.age" />
+  </div>
+
 
 </div>
 </div>
